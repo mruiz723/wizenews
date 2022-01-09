@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		09628273278A6A720031A239 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09628272278A6A720031A239 /* AppDelegate.swift */; };
 		09628275278A6A720031A239 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09628274278A6A720031A239 /* SceneDelegate.swift */; };
-		09628277278A6A720031A239 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09628276278A6A720031A239 /* ViewController.swift */; };
 		0962827A278A6A720031A239 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09628278278A6A720031A239 /* Main.storyboard */; };
 		0962827C278A6A740031A239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0962827B278A6A740031A239 /* Assets.xcassets */; };
 		0962827F278A6A740031A239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0962827D278A6A740031A239 /* LaunchScreen.storyboard */; };
+		0962828F278A7B610031A239 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0962828E278A7B610031A239 /* HomeViewController.swift */; };
+		09628293278A7CAF0031A239 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09628292278A7CAF0031A239 /* SettingsViewController.swift */; };
+		09628295278A7CBF0031A239 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09628294278A7CBF0031A239 /* FavouritesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0962826F278A6A720031A239 /* Wizenews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wizenews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09628272278A6A720031A239 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09628274278A6A720031A239 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		09628276278A6A720031A239 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09628279278A6A720031A239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0962827B278A6A740031A239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0962827E278A6A740031A239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09628280278A6A740031A239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0962828E278A7B610031A239 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		09628292278A7CAF0031A239 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		09628294278A7CBF0031A239 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,73 @@
 		09628271278A6A720031A239 /* Wizenews */ = {
 			isa = PBXGroup;
 			children = (
-				09628272278A6A720031A239 /* AppDelegate.swift */,
-				09628274278A6A720031A239 /* SceneDelegate.swift */,
-				09628276278A6A720031A239 /* ViewController.swift */,
-				09628278278A6A720031A239 /* Main.storyboard */,
-				0962827B278A6A740031A239 /* Assets.xcassets */,
-				0962827D278A6A740031A239 /* LaunchScreen.storyboard */,
+				0962828D278A795F0031A239 /* Resources */,
+				09628286278A751E0031A239 /* App */,
 				09628280278A6A740031A239 /* Info.plist */,
 			);
 			path = Wizenews;
+			sourceTree = "<group>";
+		};
+		09628286278A751E0031A239 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				09628291278A7C7D0031A239 /* Settings */,
+				09628290278A7C710031A239 /* Favourites */,
+				09628272278A6A720031A239 /* AppDelegate.swift */,
+				09628274278A6A720031A239 /* SceneDelegate.swift */,
+				0962827D278A6A740031A239 /* LaunchScreen.storyboard */,
+				0962828B278A790E0031A239 /* Commons */,
+				09628287278A78300031A239 /* Home */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		09628287278A78300031A239 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0962828E278A7B610031A239 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0962828B278A790E0031A239 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				0962828C278A79160031A239 /* Views */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		0962828C278A79160031A239 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				09628278278A6A720031A239 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0962828D278A795F0031A239 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0962827B278A6A740031A239 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		09628290278A7C710031A239 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				09628294278A7CBF0031A239 /* FavouritesViewController.swift */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		09628291278A7C7D0031A239 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				09628292278A7CAF0031A239 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09628277278A6A720031A239 /* ViewController.swift in Sources */,
 				09628273278A6A720031A239 /* AppDelegate.swift in Sources */,
 				09628275278A6A720031A239 /* SceneDelegate.swift in Sources */,
+				0962828F278A7B610031A239 /* HomeViewController.swift in Sources */,
+				09628295278A7CBF0031A239 /* FavouritesViewController.swift in Sources */,
+				09628293278A7CAF0031A239 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
