@@ -8,6 +8,13 @@
 import UIKit
 
 class FavouritesViewController: UIViewController {
+	
+	@IBOutlet weak var heightListContainer: NSLayoutConstraint!
+	private var favouritesListController: FavouritesListController?
+	
+	private struct K {
+		static let favouritesListControllerSegue = "FavouritesListControllerSegue"
+	}
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +22,21 @@ class FavouritesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+	
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+		if segue.identifier == K.favouritesListControllerSegue {
+			favouritesListController = segue.destination as? FavouritesListController
+			favouritesListController?.delegate = self
+		}
     }
-    */
 
+}
+
+extension FavouritesViewController: FavouritesListControllerDelegate {
+	
+	func heightConstraintChanged(to value: CGFloat) {
+		heightListContainer.constant = value
+	}
+	
 }

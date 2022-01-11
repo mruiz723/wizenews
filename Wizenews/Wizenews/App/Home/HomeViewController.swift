@@ -9,21 +9,32 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+	@IBOutlet weak var newsListController: UITableView!
+	@IBOutlet weak var heightConstraint: NSLayoutConstraint!
+	
+	private struct K {
+		static let count = 10
+		static let rowHeight = 43.5
+		static let cellIdentifier = "Cell"
+	}
+	
+	override func viewDidLoad() {
+        super.viewDidLoad()		
+		heightConstraint.constant = CGFloat(Double(K.count) * K.rowHeight)
     }
-    
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension HomeViewController: UITableViewDataSource {
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return K.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
+		cell.textLabel?.text = "\(indexPath.row)"
+		return cell
+	}
+	
 }
